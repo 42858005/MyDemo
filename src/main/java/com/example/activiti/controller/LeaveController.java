@@ -67,7 +67,7 @@ public class LeaveController {
 
 	/** 查询历史事项 */
 	@PostMapping("/listHistoryMatterPage")
-	public ReturnValue listHistoryMatterPage(@PathVariable String userName) {
+	public ReturnValue listHistoryMatterPage(String userName) {
 		List<HistoricTaskInstance> listHistoryMatterPage = leaveService.listHistoryMatterPage(userName);
 		for (HistoricTaskInstance t : listHistoryMatterPage) {
 			System.out.println(t.toString());
